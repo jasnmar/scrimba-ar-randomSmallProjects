@@ -9,6 +9,9 @@ function App() {
   function forceRender() {
     seton(prevOn => !prevOn)
   }
+  function incrementRenderCount() {
+    renderCount.current++
+  }
   useEffect(()=> {
     console.log('Rendered')
     renderCount.current++
@@ -17,6 +20,7 @@ function App() {
     <>
       <h3>Understanding refs</h3>
       <button onClick={forceRender}>Force re-render w/ state change</button>
+      <button onClick={incrementRenderCount}>Increment Ref Count</button>
       <h4>render count: {renderCount.current}</h4>
     </>
   )
