@@ -2,26 +2,41 @@ import { useEffect, useRef, useState } from 'react'
 import './App.css'
 
 function App() {
-  const [on, seton] = useState(false)
-  const renderCount = useRef(0)
+  const [text, setText] = useState("")
+  const [list, setList] = useState([])
+  const inputRef = useRef(null)
 
+  function handleChange(e) {
+    setText(e.target.value)
+  }
 
-  function forceRender() {
-    seton(prevOn => !prevOn)
+  function handleSubmit(e) {
+    e.preventDefault()
+    if (!text) {
+      return;
+    }
+    setList(prevList => [...prevList, text])
+    setText("")
+    inputRef.current.focus()
   }
-  function incrementRenderCount() {
-    renderCount.current++
-  }
-  useEffect(()=> {
-    console.log('Rendered')
-    renderCount.current++
-  })
+  
   return (
     <>
-      <h3>Understanding refs</h3>
-      <button onClick={forceRender}>Force re-render w/ state change</button>
-      <button onClick={incrementRenderCount}>Increment Ref Count</button>
-      <h4>render count: {renderCount.current}</h4>
+      <h2>React Project Ideas</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          onChange={handleChange}
+          value={text}
+          placeholder="Idea"
+          ref={inputRef}
+        />
+        <button>Submit</button>
+      </form>
+
+      <ol>
+        {list.map((item, i) => <li key={i}>{item}</li>)}
+      </ol>
     </>
   )
 }
