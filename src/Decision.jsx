@@ -4,6 +4,7 @@ export default function Decision({ sayName }) {
     function toggleGoingOut() {
         setGoingOut(prev => !prev)
     }
+    sayName(goingOut)
     
     return (
         <div>

@@ -10,7 +10,7 @@ function App() {
      */
     return (
         <div>
-            <Decision sayName={"Change me"} />
+            <Decision sayName={function(going) {console.log(going)}} />
         </div>
     )
 }
