@@ -1,8 +1,20 @@
-# React + Vite
+# Components 
+## Module 11, Advanced React 
+from the Scrimba.com Frontend Career Path
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Asides
 
-Currently, two official plugins are available:
+There are often a bunch of small mini projects worked on as we learn things. I finally decided a project to track them would be useful as well
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+Installation:
+Prod:
+    npm install
+    npm build
+    npm preview
+
+Dev:
+    npm install
+    npm run dev
+
+Deployment: Not deploying this one.
