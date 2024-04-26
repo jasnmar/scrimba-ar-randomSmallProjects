@@ -5,7 +5,7 @@ import Decision from "./Decision"
 function App() {
     return (
         <div>
-            <Decision sayName={function() { console.log('Hi Bob')}} />
+            <Decision sayName={function(bool) { console.log(bool)}} />
         </div>
     )
 }
