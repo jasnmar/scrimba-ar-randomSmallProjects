@@ -10,9 +10,11 @@ function App() {
      */
     return (
         <div>
-            <Decision render={function(going) {
+            <Decision>
+            {function(going) {
               return <h1>Am I going out tonight?? {going ? "Yes!" : "Nope..."}</h1>
-              }} />
+              }}
+            </Decision>
         </div>
     )
 }

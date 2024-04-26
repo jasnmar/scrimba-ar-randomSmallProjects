@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-export default function Decision({ render }) {
+export default function Decision({ children }) {
        /**
      * Challenge: figure out what to do with `render`
      */
@@ -14,7 +14,7 @@ export default function Decision({ render }) {
     return (
         <div>
             <button onClick={toggleGoingOut}>Change mind</button>
-            {render(goingOut)}
+            {children(goingOut)}
         </div>
     )
 }
