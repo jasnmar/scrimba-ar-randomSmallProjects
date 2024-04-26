@@ -10,7 +10,9 @@ function App() {
      */
     return (
         <div>
-            <Decision sayName={function(going) {console.log(going)}} />
+            <Decision sayName={function(going) {
+              return <h1>Am I going out tonight?? {going ? "Yes!" : "Nope..."}</h1>
+              }} />
         </div>
     )
 }

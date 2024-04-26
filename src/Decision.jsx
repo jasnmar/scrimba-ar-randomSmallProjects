@@ -4,12 +4,12 @@ export default function Decision({ sayName }) {
     function toggleGoingOut() {
         setGoingOut(prev => !prev)
     }
-    sayName(goingOut)
+    const jsx = sayName(goingOut)
     
     return (
         <div>
             <button onClick={toggleGoingOut}>Change mind</button>
-            <h1>Am I going out tonight, {name}?? {goingOut ? "Yes!" : "Nope..."}</h1>
+            {jsx}
         </div>
     )
 }
