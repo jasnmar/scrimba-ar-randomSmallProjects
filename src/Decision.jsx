@@ -1,7 +1,6 @@
 import { useState } from "react"
 export default function Decision({ sayName }) {
     const [goingOut, setGoingOut] = useState(false)
-    sayName(goingOut)
     function toggleGoingOut() {
         setGoingOut(prev => !prev)
     }
