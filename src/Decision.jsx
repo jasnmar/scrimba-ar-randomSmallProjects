@@ -9,12 +9,12 @@ export default function Decision({ render }) {
     function toggleGoingOut() {
         setGoingOut(prev => !prev)
     }
-    const jsx = render(goingOut)
+    
     
     return (
         <div>
             <button onClick={toggleGoingOut}>Change mind</button>
-            {jsx}
+            {render(goingOut)}
         </div>
     )
 }
